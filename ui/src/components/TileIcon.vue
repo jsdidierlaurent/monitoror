@@ -50,6 +50,27 @@
     <svg v-else-if="isAzure" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
       <path d="M193.412 58.029l62.586-11.421v157.685l.005.001-62.588 51.604-.004-.001-.001.001v-.001l-96.473-32.233V256L25.94 172.124l167.47 23.417V58.03L25.938 89.904v82.22L0 167.306V94.841l25.938-33.88 87.979-34.394V0l79.495 58.029z" fill-rule="nonzero"/>
     </svg>
+
+    <svg v-else-if="isStripe" version="1.1"
+      id="svg5512" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 362 151.8"
+      style="enable-background:new 0 0 362 151.8;" xml:space="preserve">
+      <path id="path5516" inkscape:connector-curvature="0" class="st0" d="M361,78.4c0-25.6-12.4-45.8-36.1-45.8
+        c-23.8,0-38.2,20.2-38.2,45.6c0,30.1,17,45.3,41.4,45.3c11.9,0,20.9-2.7,27.7-6.5V97c-6.8,3.4-14.6,5.5-24.5,5.5
+        c-9.7,0-18.3-3.4-19.4-15.2h48.9C360.8,86,361,80.8,361,78.4z M311.6,68.9c0-11.3,6.9-16,13.2-16c6.1,0,12.6,4.7,12.6,16H311.6z"/>
+      <path id="path5518" inkscape:connector-curvature="0" class="st0" d="M248.1,32.6c-9.8,0-16.1,4.6-19.6,7.8l-1.3-6.2h-22v116.6
+        l25-5.3l0.1-28.3c3.6,2.6,8.9,6.3,17.7,6.3c17.9,0,34.2-14.4,34.2-46.1C282.1,48.4,265.6,32.6,248.1,32.6L248.1,32.6z M242.1,101.5
+        c-5.9,0-9.4-2.1-11.8-4.7l-0.1-37.1c2.6-2.9,6.2-4.9,11.9-4.9c9.1,0,15.4,10.2,15.4,23.3C257.5,91.5,251.3,101.5,242.1,101.5z"/>
+      <polygon id="polygon5520" class="st0" points="195.9,21.3 195.9,1 170.8,6.3 170.8,26.7 "/>
+      <rect id="rect5522" x="170.8" y="34.3" class="st0" width="25.1" height="87.5"/>
+      <path id="path5524" inkscape:connector-curvature="0" class="st0" d="M143.9,41.7l-1.6-7.4h-21.6v87.5h25V62.5
+        c5.9-7.7,15.9-6.3,19-5.2v-23C161.5,33.1,149.8,30.9,143.9,41.7L143.9,41.7z"/>
+      <path id="path5526" inkscape:connector-curvature="0" class="st0" d="M93.9,12.6l-24.4,5.2l-0.1,80.1c0,14.8,11.1,25.7,25.9,25.7
+        c8.2,0,14.2-1.5,17.5-3.3V100c-3.2,1.3-19,5.9-19-8.9V55.6h19V34.3h-19L93.9,12.6z"/>
+      <path id="path5528" inkscape:connector-curvature="0" class="st0" d="M26.3,59.7c0-3.9,3.2-5.4,8.5-5.4c7.6,0,17.2,2.3,24.8,6.4
+        V37.2c-8.3-3.3-16.5-4.6-24.8-4.6C14.5,32.6,1,43.2,1,60.9C1,88.5,39,84.1,39,96c0,4.6-4,6.1-9.6,6.1c-8.3,0-18.9-3.4-27.3-8v23.8
+        c9.3,4,18.7,5.7,27.3,5.7c20.8,0,35.1-10.3,35.1-28.2C64.4,65.6,26.3,70.9,26.3,59.7L26.3,59.7z"/>
+    </svg>
   </div>
 </template>
 
@@ -120,6 +141,10 @@
         TileType.AzureDevOpsBuild,
         TileType.AzureDevOpsRelease,
       ].includes(this.tileType)
+    }
+
+    get isStripe(): boolean {
+      return this.tileType === TileType.StripeCount
     }
   }
 </script>

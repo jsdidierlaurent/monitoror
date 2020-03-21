@@ -12,6 +12,7 @@ export enum TileType {
   Jenkins = 'JENKINS-BUILD',
   AzureDevOpsBuild = 'AZUREDEVOPS-BUILD',
   AzureDevOpsRelease = 'AZUREDEVOPS-RELEASE',
+  StripeCount = 'STRIPE-COUNT',
 
   Empty = 'EMPTY',
   Group = 'GROUP',

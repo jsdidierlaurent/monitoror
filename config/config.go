@@ -39,6 +39,7 @@ type (
 		Jenkins     map[string]*Jenkins
 		AzureDevOps map[string]*AzureDevOps
 		Github      map[string]*Github
+		Stripe      map[string]*Stripe
 	}
 
 	Ping struct {
@@ -96,6 +97,12 @@ type (
 		Token                string
 		CountCacheExpiration int // In Millisecond
 		InitialMaxDelay      int // In Millisecond
+	}
+
+	Stripe struct {
+		Token                string // Secret API key
+		CountCacheExpiration int    // In Millisecond
+		InitialMaxDelay      int    // In Millisecond
 	}
 )
 
@@ -185,6 +192,13 @@ func InitConfig() *Config {
 		viper.SetDefault(fmt.Sprintf("Monitorable.Github.%s.InitialMaxDelay", variant), DefaultInitialMaxDelay)
 	}
 
+	// --- Stripe Configuration ---
+	for variant := range variants["Stripe"] {
+		viper.SetDefault(fmt.Sprintf("Monitorable.Stripe.%s.Token", variant), "")
+		viper.SetDefault(fmt.Sprintf("Monitorable.Stripe.%s.CountCacheExpiration", variant), 300000)
+		viper.SetDefault(fmt.Sprintf("Monitorable.Stripe.%s.InitialMaxDelay", variant), DefaultInitialMaxDelay)
+	}
+
 	_ = viper.Unmarshal(&config)
 
 	return &config
@@ -239,4 +253,8 @@ func (t *AzureDevOps) IsValid() bool {
 
 func (g *Github) IsValid() bool {
 	return g.Token != ""
+}
+
+func (s *Stripe) IsValid() bool {
+	return s.Token != ""
 }

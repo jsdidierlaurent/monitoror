@@ -1,4 +1,4 @@
-//go:generate mockery -name ChecksService
+//go:generate mockery --name ChecksService
 
 package gogithub
 

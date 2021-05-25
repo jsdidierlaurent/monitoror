@@ -25,7 +25,11 @@ type (
 		Field string `query:"field" validate:"required"`
 	}
 
-	Params4 map[string]string
+	Params4 struct {
+		Field chan string `query:"field" validate:"required"`
+	}
+
+	Params5 map[string]string
 )
 
 func (p *Params2) Validate() []validator.Error { return nil }
@@ -35,6 +39,8 @@ func (p *Params3) Validate() []validator.Error {
 }
 
 func (m *Params4) Validate() []validator.Error { return nil }
+
+func (m *Params5) Validate() []validator.Error { return nil }
 
 func TestBindAndValidateParams(t *testing.T) {
 	e := echo.New()
@@ -58,8 +64,17 @@ func TestBindAndValidateParams(t *testing.T) {
 	assert.Error(t, err)
 	assert.Equal(t, `Invalid "field" field. Must be boom.`, err.Error())
 
+	req = httptest.NewRequest(echo.GET, "/api/v1/xxx?field=test", nil)
+	res = httptest.NewRecorder()
+	ctx = e.NewContext(req, res)
+
 	p4 := &Params4{}
 	err = BindAndValidateParams(ctx, p4)
 	assert.Error(t, err)
 	assert.Equal(t, `invalid configuration, unable to parse request parameters`, err.Error())
+
+	p5 := &Params5{}
+	assert.Panics(t, func() {
+		_ = BindAndValidateParams(ctx, p5)
+	})
 }

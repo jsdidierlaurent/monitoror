@@ -1,4 +1,4 @@
-//go:generate mockery -name Jenkins
+//go:generate mockery --name Jenkins
 
 package gojenkins
 

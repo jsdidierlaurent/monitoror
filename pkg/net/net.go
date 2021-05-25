@@ -1,4 +1,4 @@
-//go:generate mockery -name Conn
+//go:generate mockery --name Conn
 
 package net
 

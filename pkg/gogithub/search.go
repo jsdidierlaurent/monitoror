@@ -1,4 +1,4 @@
-//go:generate mockery -name SearchService
+//go:generate mockery --name SearchService
 
 package gogithub
 

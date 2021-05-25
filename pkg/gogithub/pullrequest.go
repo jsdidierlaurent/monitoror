@@ -1,4 +1,4 @@
-//go:generate mockery -name PullRequestService
+//go:generate mockery --name PullRequestService
 
 package gogithub
 

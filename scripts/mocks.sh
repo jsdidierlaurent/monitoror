@@ -11,5 +11,5 @@ find . -name "mocks" -type d -print0 | xargs -r0 -- rm -r
 go generate ./...
 
 # Generating mocks for external interfaces
-mockery -name Client -output pkg/goazuredevops/build/mocks  -dir $(go list -m -f '{{ .Dir }}' github.com/jsdidierlaurent/azure-devops-go-api/azuredevops)/build
-mockery -name Client -output pkg/goazuredevops/release/mocks  -dir $(go list -m -f '{{ .Dir }}' github.com/jsdidierlaurent/azure-devops-go-api/azuredevops)/release
+mockery --name Client --output pkg/goazuredevops/build/mocks --dir "$(go list -m -f '{{ .Dir }}' github.com/jsdidierlaurent/azure-devops-go-api/azuredevops)/build"
+mockery --name Client --output pkg/goazuredevops/release/mocks --dir "$(go list -m -f '{{ .Dir }}' github.com/jsdidierlaurent/azure-devops-go-api/azuredevops)/release"

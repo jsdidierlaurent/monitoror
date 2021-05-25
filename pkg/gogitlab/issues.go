@@ -1,4 +1,4 @@
-//go:generate mockery -name IssuesService
+//go:generate mockery --name IssuesService
 
 package gogitlab
 

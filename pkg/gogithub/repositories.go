@@ -1,4 +1,4 @@
-//go:generate mockery -name RepositoriesService
+//go:generate mockery --name RepositoriesService
 
 package gogithub
 

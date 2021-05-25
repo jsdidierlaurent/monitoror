@@ -1,4 +1,4 @@
-//go:generate mockery -name GitService
+//go:generate mockery --name GitService
 
 package gogithub
 

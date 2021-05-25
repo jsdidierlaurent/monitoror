@@ -1,4 +1,4 @@
-//go:generate mockery -name Usecase
+//go:generate mockery --name Usecase
 
 package config
 

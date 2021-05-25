@@ -1,4 +1,4 @@
-//go:generate mockery -name Registry|TileEnabler|GeneratorEnabler|TileMetadataExplorer|VariantMetadataExplorer
+//go:generate mockery --name Registry|TileEnabler|GeneratorEnabler|TileMetadataExplorer|VariantMetadataExplorer
 
 package registry
 

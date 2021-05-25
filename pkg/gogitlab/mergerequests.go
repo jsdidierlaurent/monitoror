@@ -1,4 +1,4 @@
-//go:generate mockery -name MergeRequestsService
+//go:generate mockery --name MergeRequestsService
 
 package gogitlab
 

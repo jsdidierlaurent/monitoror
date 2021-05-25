@@ -1,4 +1,4 @@
-//go:generate mockery -name Monitorable
+//go:generate mockery --name Monitorable
 
 package models
 

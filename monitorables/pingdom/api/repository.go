@@ -1,4 +1,4 @@
-//go:generate mockery -name Repository
+//go:generate mockery --name Repository
 
 package api
 

@@ -1,4 +1,4 @@
-//go:generate mockery -name Dialer
+//go:generate mockery --name Dialer
 
 package net
 

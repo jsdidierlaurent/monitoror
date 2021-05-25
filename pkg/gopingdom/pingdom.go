@@ -1,4 +1,4 @@
-//go:generate mockery -name PingdomCheckAPI|PingdomTransactionCheckAPI
+//go:generate mockery --name PingdomCheckAPI|PingdomTransactionCheckAPI
 
 package gopingdom
 

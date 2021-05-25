@@ -1,4 +1,4 @@
-//go:generate mockery -name TravisCI
+//go:generate mockery --name TravisCI
 
 package gotravis
 

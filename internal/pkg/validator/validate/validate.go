@@ -63,6 +63,10 @@ func Struct(s interface{}) []pkgValidator.Error {
 	var errors []pkgValidator.Error
 
 	if err := validate.Struct(s); err != nil {
+		if _, ok := err.(validator.ValidationErrors); !ok {
+			panic("unsupported echo bind parameters type. must be a struct.")
+		}
+
 		// range over all validate validateError to bind then into ValidatorError
 		for _, err := range err.(validator.ValidationErrors) {
 			id, exists := validateTagMapping[err.Tag()]

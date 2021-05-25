@@ -1,4 +1,4 @@
-//go:generate mockery -name RouterOption -output ../mocks
+//go:generate mockery --name RouterOption --output ../mocks
 
 package options
 

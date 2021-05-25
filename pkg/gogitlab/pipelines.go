@@ -1,4 +1,4 @@
-//go:generate mockery -name PipelinesService
+//go:generate mockery --name PipelinesService
 
 package gogitlab
 

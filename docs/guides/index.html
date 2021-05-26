@@ -214,7 +214,7 @@ cat > ~/.config/autostart/chromium-browser.desktop &lt;&lt;END
       <ul>
         <li>Go v1.14+</li>
         <li>Nodejs v10+</li>
-        <li>Yarn v1.7+</li>
+        <li>npm v7+</li>
       </ul>
     </div>
 
@@ -262,15 +262,15 @@ make run
       <pre class="language-bash"><code>
 # UI
 cd ui
-yarn
-yarn serve
+npm install
+npm run serve
       </code></pre>
 
       <h5 class="m-documentation--configuration-side-title">Build project</h5>
       <pre class="language-bash"><code>
 cd ui
-yarn
-yarn run build
+npm install
+npm run build
 cd ..
 make install
 make build

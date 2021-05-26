@@ -91,7 +91,7 @@ https://monitoror.com
 
 
 ┌─ DEVELOPMENT MODE ──────────────────────────────┐
-│ UI must be started via yarn serve from ./ui     │
+│ UI must be started via npm serve from ./ui      │
 │ For more details, check our development guide:  │
 │ https://monitoror.com/guides/#development       │
 └─────────────────────────────────────────────────┘

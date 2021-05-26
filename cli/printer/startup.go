@@ -25,7 +25,7 @@ var startupTemplate = `
 {{ if .DisableUI }}
 
 ┌─ {{ "DEVELOPMENT MODE" | yellow }} ──────────────────────────────┐
-│ UI must be started via {{ "yarn serve" | green }} from ./ui     │
+│ UI must be started via {{ "npm serve" | green }} from ./ui      │
 │ For more details, check our development guide:  │
 │ {{ "https://monitoror.com/guides/#development" | blue }}       │
 └─────────────────────────────────────────────────┘
